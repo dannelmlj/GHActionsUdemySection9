@@ -7,6 +7,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      # checkout can't be put in composite custom actions --> the foler of the composite actions is the same repo, and checkout is needed to get the code of the repo
       - name: Get code
         uses: actions/checkout@v3
       - name: Cache dependencies
