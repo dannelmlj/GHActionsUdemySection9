@@ -1,5 +1,16 @@
 name: 'Deploy to S3'
 description: 'Deploy to S3 --> using javascript'
+inputs:
+  bucket:
+    description: 'The Bucket Name'
+    required: true
+  bucket-region:
+    description: 'The Bucket Region'
+    required: false
+    default: 'us-east-1'
+  dist-folder:
+    description: 'The Folder to Deploy'
+    required: true
 runs:
   using: 'node20'
   main: 'main.js'
