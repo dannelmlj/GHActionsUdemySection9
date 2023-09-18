@@ -1,5 +1,5 @@
 name: 'Deploy to S3'
-description: 'Deploy to S3 --> using javascript'
+description: 'Deploy to S3 --> using Docker'
 inputs:
   bucket:
     description: 'The Bucket Name'
@@ -12,9 +12,8 @@ inputs:
     description: 'The Folder to Deploy'
     required: true
 outputs:
-  web-url:
+  website-url:
     description: 'The URL of the deployed website'
-
 runs:
-  using: 'node20'
-  main: 'main.js'
+  using: 'docker'
+  image: 'Dockerfile'
